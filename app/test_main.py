@@ -13,9 +13,9 @@ class TestApp(unittest.TestCase):
     
     def test_hello_endpoint(self):
         response = self.app.get('/')
-        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.status_code, 200)
         data = response.get_json()
-        self.assertEqual(data['message'], '¡Hola! Esta es una aplicación de ejemplo para CI/CD')
+        self.assertEqual(data['mensaje'], '¡Hola! Esta es una aplicación de ejemplo para CI/CD')
 
 if __name__ == '__main__':
     unittest.main()
